@@ -9,6 +9,15 @@ const hwRoute = require("./routes/homework")
 
 app.use("/v1", hwRoute);
 
+//performance
+// const pfRoute = require("./routes/perfomance")
+// app.use("/v2", pfRoute)
+
+//javascript exercise 
+const jsExercises = require("./routes/jsExercises");
+app.use("/v3", jsExercises);
+
+
 app.listen(port, ()=>{
     console.log('app listening on port', port);
-});
+}); 

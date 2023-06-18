@@ -90,25 +90,87 @@ function factorial(req, res) {
     }
     res.send(`giai thua cua ${number} la ${result}`)
 }
+//sort array number
+function sortArrayNumber(req, res) {
+    let arr = req.body;
+    res.send(arr.sort());
+}
+
 //check anagram
-// function checkAnagram(req, res){
-//     let {string1, string2} = req.query;
-//     let result = false;
-//     if(string1.length !== string2.length){
-//         result = false;
-//     }
-//     else{
-//         let arrString1 = string1.split("");
-//         let arrString2 = string2.split("");
+function checkAnagram(req, res) {
+    let { string1, string2 } = req.query;
+    let result = false;
+    if (string1.length !== string2.length) {
+        result = false;
+    }
+    else {
+        string1 = string1.split("").sort().join("");
+        string2 = string2.split("").sort().join("");
+        if (string1 === string2) {
+            result = true;
+        }
+        else {
+            result = false;
+        }
+    }
+    res.send(result);
+}
+//create book
+function createBook(req, res) {
+    let { title, author, year } = req.query;
+    res.send({ title, author, year });
+}
 
+//area rectangle
+function areaRectangle(req, res) {
+    let { width, height } = req.query;
+    width = parseFloat(width);
+    height = parseFloat(height);
+    res.send({ width, height, area: width * height });
+}
+//even aray
+function evenArray(req, res) {
+    let arr = req.body;
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+            result.push(arr[i]);
+        }
+    }
+    res.send(result);
+}
+//random number
+function randomNumber(req, res) {
+    let { start, end } = req.query;
+    start = parseInt(start);
+    end = parseInt(end);
+    console.log(start, end);
+    let result = Math.floor(Math.random() * (end - start + 1)) + start;
+    console.log(result);
+    res.send(`${result}`);
+}
+//perfect number
+function perfectNumber(req, res) {
+    let { number } = req.query;
+    number = parseInt(number);
+    console.log(number);
+    let result = false;
+    let arr = [];
+    for (let i = 1; i < number; i++) {
+        if (number % i === 0) {
+            arr.push(i);
+        }
+    }
+    console.log(arr);
+    let total = 0;
+    arr.forEach(num => total += num);
+    console.log(total);
 
-
-//         for (let i = 0; i < string1.length; i++){
-
-
-//         }
-//     }
-// }
+    if (total === number) {
+        result = true;
+    }
+    res.send(result);
+}
 
 //revert content
 function reverseContent(req, res) {
@@ -135,7 +197,7 @@ function fizzbuzz(req, res) {
     if (number % 5 === 0) {
         result += "buzz";
     }
-    
+
     res.send(`${result}`);
 }
 module.exports = {
@@ -146,8 +208,12 @@ module.exports = {
     isPalindrome,
     countChar,
     randomString,
-    factorial,
-    // checkAnagram,
+    factorial, sortArrayNumber,
+    checkAnagram,
     reverseContent,
-    fizzbuzz
+    fizzbuzz,
+    createBook, areaRectangle,
+    evenArray,
+    randomNumber,
+    perfectNumber
 }

@@ -24,10 +24,24 @@ router.get("/string-random", exerciseController.randomString);
 router.get("/factorial", exerciseController.factorial);
 
 //ex9
-
+router.post("/array-number", exerciseController.sortArrayNumber);
 //ex10
-// router.get("/anagram", exerciseController.checkAnagram);
+router.get("/anagram", exerciseController.checkAnagram);
 
+//ex11
+router.get("/book", exerciseController.createBook);
+
+//ex12
+router.get("/rectangle", exerciseController.areaRectangle);
+
+//ex13
+router.post("/even-array", exerciseController.evenArray);
+
+//ex14
+router.get("/random-number", exerciseController.randomNumber);
+
+//ex15
+router.get("/perfect-number", exerciseController.perfectNumber);
 //ex17
 router.get("/content", exerciseController.reverseContent);
 router.get("/fizzbuzz", exerciseController.fizzbuzz);

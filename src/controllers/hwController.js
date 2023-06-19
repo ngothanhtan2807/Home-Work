@@ -40,5 +40,5 @@ function findChildrenByCountry(req, res) {
     });
 
 
-}
+} 
 module.exports = { getAllData, insertData, findChildrenByCountry };

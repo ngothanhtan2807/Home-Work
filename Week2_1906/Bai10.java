@@ -1,4 +1,4 @@
-package Week2;
+package Week2_1906;
 
 public class Bai10 {
     public static void pyramid(int num) {

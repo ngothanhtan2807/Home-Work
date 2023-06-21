@@ -1,4 +1,4 @@
-package Week2;
+package Week2_1906;
 
 public class Bai8 {
     public static int isLeapYear(int year) {

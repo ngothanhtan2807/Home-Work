@@ -1,4 +1,4 @@
-package Week2;
+package Week2_1906;
 
 public class Bai12 {
     public static void main(String[] args) {

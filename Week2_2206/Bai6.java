@@ -18,13 +18,12 @@ public class Bai6 {
                 result = false;
             }
         } catch (InputMismatchException e) {
-            // TODO: handle exception
+
             System.out.println("So can kiem tra khong hop le");
             result = false;
-        } finally {
-            return (result ? "ArrayList co chua gia tri kiem tra"
-                    : "Gia tri can kiem tra khong ton tai trong ArrayList");
         }
+        return (result ? "ArrayList co chua gia tri kiem tra"
+                : "Gia tri can kiem tra khong ton tai trong ArrayList");
 
     }
 

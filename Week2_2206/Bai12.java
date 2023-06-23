@@ -10,7 +10,7 @@ import java.util.TreeMap;
 public class Bai12 {
     public static TreeMap<String, Integer> countLoopString() {
         String input = "Everyone knows that paper is made from trees. But when one looks at trees, one cannot imagine that something so soft and fragile as the paper is made is so hard and strong. Plant materials such as wood are made of fibres known as cellulose.";
-        String[] arrInput = input.replace(".", "").replace(",", "").split(" ");
+        String[] arrInput = input.replace(".", "").replace(",", "").toLowerCase().split(" ");
         ArrayList<String> list = new ArrayList<>(Arrays.asList(arrInput));
         System.out.println("length of input" + arrInput.length);
 
@@ -45,9 +45,7 @@ public class Bai12 {
     }
 
     public static void main(String[] args) {
-        // System.out.println(print(countLoopString()));
-        // System.out.println("a" == "a");
-        String a = " ";
-        a.hashCode();
+        System.out.println(print(countLoopString()));
+        // System.out.println("A".equalsIgnoreCase("a"));
     }
 }

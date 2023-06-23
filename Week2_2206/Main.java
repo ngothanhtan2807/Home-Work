@@ -1,5 +1,7 @@
 package Week2_2206;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -15,6 +17,8 @@ public class Main {
                 System.out.println("Done!!!");
                 break;
             } else {
+                ArrayList<Integer> arr1 = new ArrayList<>(List.of(1, 2, 3, 4));
+                ArrayList<Integer> arr2 = new ArrayList<>(List.of(1, 5, 4));
 
                 switch (input) {
                     case 1:
@@ -68,7 +72,7 @@ public class Main {
                         break;
                     case 13:
                         System.out.println("bai 13:");
-
+                        System.out.println(Bai13.countAppear());
                         break;
                     case 14:
                         System.out.println("bai 14:");
@@ -76,7 +80,7 @@ public class Main {
                         break;
                     case 15:
                         System.out.println("bai 15:");
-
+                        Bai15.insertElementAt();
                         break;
                     case 16:
                         System.out.println("bai 16:");
@@ -84,19 +88,19 @@ public class Main {
                         break;
                     case 17:
                         System.out.println("bai 17:");
-
+                        System.out.println(Bai17.containsArrayList(arr1, arr2));
                         break;
                     case 18:
                         System.out.println("bai 18:");
-
+                        System.out.println(Bai18.sortLinkedList());
                         break;
                     case 19:
                         System.out.println("bai 19:");
-
+                        Bai19.printHashSet();
                         break;
                     case 20:
                         System.out.println("bai 20:");
-
+                        System.out.println(Bai20.getFirstAndLast());
                         break;
                     default:
                         System.out.println("khong ton tai");

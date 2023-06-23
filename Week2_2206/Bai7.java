@@ -1,12 +1,14 @@
 package Week2_2206;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Bai7 {
     public static List<String> sorList() {
         List<String> input = new ArrayList<>(List.of("ab", "sa", "d", "c", "e", "q", "aa", "1111111", "111"));
-        System.out.println("Danh sach chua sap sep dau vao: ");
+        System.out.println("Danh sach chua sap xep dau vao: ");
         System.out.println(input);
         String temp;
         for (int i = 0; i < input.size(); i++) {
@@ -19,7 +21,8 @@ public class Bai7 {
                 }
             }
         }
-        System.out.println("Danh sach sau khi sap sep la: ");
+        // Collections.sort(input, Comparator.naturalOrder());
+        System.out.println("Danh sach sau khi sap xep la: ");
         return input;
     }
 

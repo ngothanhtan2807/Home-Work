@@ -101,15 +101,17 @@ public class Bai5 {
         Product p1 = new Product("laptop", 1.0);
         Product p2 = new Product("laptop", 1.0);
         Product p3 = new Product("pc", 123451.0);
+        Product p4 = new Product("pc", 1111.0);
         Bai5 b5 = new Bai5();
         b5.put(p1);
         b5.put(p2);
         b5.put(p3);
+        b5.put(p4);
         System.out.println(b5.listProduct);
-        System.out.println(b5.get("laptop"));
-        // System.out.println(b5.remove("laptop"));
-        System.out.println(b5.totalPriceOf("laptop"));
-        System.out.println(b5.countTotal("laptop"));
+        System.out.println(b5.get("laptop11"));
+        // // System.out.println(b5.remove("laptop"));
+        // System.out.println(b5.totalPriceOf("laptop"));
+        // System.out.println(b5.countTotal("laptop"));
         // System.out.println(b5.listProduct);
     }
 }

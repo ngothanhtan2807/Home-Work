@@ -3,6 +3,7 @@ package Week2_2206_HashMap;
 import java.util.HashMap;
 import java.util.Map;
 
+//Tạo class Election (cuộc bầu cử), cung cấp 2 method là vote và winner
 public class Election {
     HashMap<String, Integer> candidates = new HashMap<>();
 
@@ -33,7 +34,7 @@ public class Election {
 
     public static void main(String[] args) {
         Election e1 = new Election();
-        e1.vote("nguyen van a");
+        e1.vote("Obama");
         e1.vote("nguyen van a");
         e1.vote("nguyen van a");
         e1.vote("nguyen van a");
@@ -44,5 +45,6 @@ public class Election {
         e1.vote("nguyen van b");
         System.out.println(e1.candidates);
         e1.winner();
+
     }
 }

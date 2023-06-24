@@ -52,11 +52,11 @@ public class Main {
                         break;
                     case 8:
                         System.out.println("bai 8:");
-
+                        Bai8.createAndSortTreeSet();
                         break;
                     case 9:
                         System.out.println("bai 9:");
-
+                        Bai9.addArraylistToHashset();
                         break;
                     case 10:
                         System.out.println("bai 10:");
